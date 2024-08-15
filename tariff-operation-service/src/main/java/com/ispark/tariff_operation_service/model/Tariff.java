@@ -1,18 +1,16 @@
 package com.ispark.tariff_operation_service.model;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "tariffs")
+@Data
+@NoArgsConstructor
 public class Tariff {
 
     @Id
@@ -29,6 +27,7 @@ public class Tariff {
     private List<TariffDetail> details;
 
     private String lastUpdatedBy;
+
     private LocalDateTime createDate;
     private LocalDateTime updateDate;
 }
